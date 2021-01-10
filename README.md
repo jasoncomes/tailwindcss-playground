@@ -1,10 +1,9 @@
-# Tailwindcss Playground
+# Tailwind CSS Playground
 
 A Tailwind CSS playground for rapidly building custom user interfaces in a local development environment. The playground is intended to expedite the frontend development while being platform or management system agnostic.
 
 Feel free to [buy me a beer](https://www.paypal.com/donate?business=GJKCBDMVCTHW6&item_name=beer+belly&currency_code=USD). Next conference, I'll hit you back!
 
----
 
 ## Requirements
 
@@ -16,69 +15,62 @@ Feel free to [buy me a beer](https://www.paypal.com/donate?business=GJKCBDMVCTHW
 
 ## Commands
 
-
 ##### Install
 
 ```
 npm i;
 ```
 
-##### Build `NODE_ENV=production webpack`
+##### Build 
 
 ```
 npm run build;
 ```
 
-##### Watch `NODE_ENV=development webpack --watch`
-
-```
-npm run watch;
-```
-
-##### Start `NODE_ENV=development webpack serve --open`
+##### Start 
 
 ```
 npm run start;
 ```
 
-##### Lint `npm run lint:js; npm run lint:css`
+##### Lint
 
 ```
 npm run lint;
 ```
 
-##### Lint Fix `npm run lint:js:fix; npm run lint:css:fix`
+##### Lint Fix
 
 ```
 npm run lint:fix;
 ```
 
-##### Lint JS `eslint --ext .js assets/src/js`
+##### Lint JS
 
 ```
 npm run lint:js;
 ```
 
-##### Lint JS Fix `eslint --ext .js assets/src/js --fix`
+##### Lint JS Fix
 
 ```
 npm run lint:js:fix;
 ```
 
-##### Lint CSS `stylelint assets/src/css/**/*.scss`
+##### Lint CSS
 
 ```
 npm run lint:css;
 ```
 
-##### Lint CSS Fix `stylelint assets/src/css/**/*.scss --fix`
+##### Lint CSS Fix
 
 ```
 npm run lint:css:fix;
 ```
 
 
-## Src
+## Source
 
 ### HTML
 

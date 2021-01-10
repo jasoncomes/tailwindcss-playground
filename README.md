@@ -132,10 +132,10 @@ Loader to process CSS with [PostCSS](https://www.npmjs.com/package/postcss). Pos
 
 PostCSS Plugins
 
-- [PostCSS Imports](https://www.npmjs.com/package/postcss-import) Transform @import rules by inlining content. This plugin can consume local files, node modules or web_modules.
-- [Autoprefixer](https://www.npmjs.com/package/autoprefixer) PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from Can I Use. It is recommended by Google and used in Twitter and Alibaba.
-- [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) A utility-first CSS framework for rapidly building custom user interfaces.
-- [CSS Nano](https://www.npmjs.com/package/cssnano) Takes your nicely formatted CSS and runs it through many focused optimisations, to ensure that the final result is as small as possible for a production environment.
+- [PostCSS Imports](https://www.npmjs.com/package/postcss-import): Transform @import rules by inlining content. This plugin can consume local files, node modules or web_modules.
+- [Autoprefixer](https://www.npmjs.com/package/autoprefixer): PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from Can I Use. It is recommended by Google and used in Twitter and Alibaba.
+- [Tailwind CSS](https://www.npmjs.com/package/tailwindcss): A utility-first CSS framework for rapidly building custom user interfaces.
+- [CSS Nano](https://www.npmjs.com/package/cssnano): Takes your nicely formatted CSS and runs it through many focused optimisations, to ensure that the final result is as small as possible for a production environment.
 
 ###### [CSS Loader](https://www.npmjs.com/package/css-loader) `css-loader`
 

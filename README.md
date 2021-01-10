@@ -1,6 +1,6 @@
 # Tailwind CSS Playground
 
-A Tailwind CSS playground for rapidly building custom user interfaces in a local development environment. The playground is intended to expedite the frontend development while being platform or management system agnostic.
+A [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) playground for rapidly building custom user interfaces in a local development environment. The playground is intended to expedite the frontend development while being platform or management system agnostic.
 
 Feel free to [buy me a beer](https://www.paypal.com/donate?business=GJKCBDMVCTHW6&item_name=beer+belly&currency_code=USD). Next conference, I'll hit you back!
 

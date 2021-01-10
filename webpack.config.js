@@ -37,7 +37,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: {
     styles: './src/css/main.scss',
-    app: './src/js/app.js',
+    app: './src/js/app.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -66,9 +66,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
       },
       {
         test: /.(css|s[ac]ss)$/,
@@ -92,6 +99,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   optimization: {
     minimize: process.env.NODE_ENV === 'production',

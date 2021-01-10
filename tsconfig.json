@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "ESNext",
+    "allowJs": true
+  },
+  "include": ["src/js/**/*.ts"],
+}

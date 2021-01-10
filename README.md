@@ -5,7 +5,7 @@ A framework agnostic [TailwindCSS](https://github.com/tailwindlabs/tailwindcss) 
 
 ## Requirements
 
-### Software
+#### Software
 
 - [Node - v14.x](https://nodejs.org/download/release/latest-v14.x/)
 
@@ -89,15 +89,15 @@ This command lints and fixes only the css files.
 
 ## Source
 
-### HTML
+#### HTML
 
 Entry point for any html templates, components, partials, etc.
 
-### Javascript
+#### Javascript
 
 Entry point to the javascript related assets.
 
-### Styles
+#### Styles
 
 Entry point for sass/scss styles, however Tailwind CSS should cover about 99.9% (just saying).
 
@@ -105,20 +105,20 @@ Entry point for sass/scss styles, however Tailwind CSS should cover about 99.9% 
 
 ## Webpack
 
-### Dev Server
+#### Dev Server
 
 Using the [Wepback Dev Server Plugin](https://www.npmjs.com/package/webpack-dev-server), the development server that provides live reloading. Reloads on entry and view changes.
 
 
-### Rules w/Loaders
+#### Rules w/Loaders
 
-#### Javascript
+##### Javascript
 
 ###### [Babel Loader](https://www.npmjs.com/package/babel-loader) `babel-loader`
 
 This package allows transpiling JavaScript files using Babel and webpack.
 
-#### Styles
+##### Styles
 
 ###### [SASS Loader](https://www.npmjs.com/package/sass-loader) `sass-loader`
 
@@ -144,7 +144,7 @@ The css-loader interprets @import and url() like import/require() and will resol
 This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps.
 
 
-### Plugins
+#### Plugins
 
 ###### [HTML Webpack Plugin](https://www.npmjs.com/package/html-webpack-plugin) `html-webpack-plugin`
 
@@ -162,7 +162,7 @@ A JavaScript parser and mangler/compressor toolkit for ES6+. This minifies your 
 
 ## Lint
 
-### Javascript
+#### Javascript
 
 ###### [Airbnb Base](https://www.npmjs.com/package/eslint-config-airbnb-base) `airbnb-base`
 
@@ -176,7 +176,7 @@ ESLint is a tool for identifying and reporting on patterns found in ECMAScript/J
 
 Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 
-### Styles
+#### Styles
 
 ###### [Stylelint SASS Guidelines](https://www.npmjs.com/package/stylelint-config-sass-guidelines) `stylelint-config-sass-guidelines`
 

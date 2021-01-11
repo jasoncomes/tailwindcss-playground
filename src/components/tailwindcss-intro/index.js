@@ -56,40 +56,6 @@ class WebComponent extends HTMLElement {
   }
 
   /*
-   * connectedCallback
-   *
-   * Invoked each time the custom element is appended into a
-   * document-connected element. This will happen each time the
-   * node is moved, and may happen before the element's contents
-   * have been fully parsed.
-   *
-   */
-  connectedCallback() {
-    console.log('Added to page.');
-  }
-
-  /*
-   * disconnectedCallback
-   *
-   * Invoked each time the custom element is disconnected from
-   * the document's DOM.
-   *
-   */
-  disconnectedCallback() {
-    console.log('Removed from page.');
-  }
-
-  /*
-   * adoptedCallback
-   *
-   * Invoked each time the custom element is moved to a new document.
-   *
-   */
-  adoptedCallback() {
-    console.log('Moved to new page.');
-  }
-
-  /*
    * attributeChangedCallback
    *
    * Invoked each time one of the custom element's attributes is
@@ -97,13 +63,7 @@ class WebComponent extends HTMLElement {
    * for is specified in a static get observedAttributes method
    *
    */
-  attributeChangedCallback(name, oldValue, newValue) {
-    console.log('Attributes changed.');
-    console.table({
-      name,
-      oldValue,
-      newValue,
-    });
+  attributeChangedCallback() {
     this.render();
   }
 }

@@ -1,4 +1,5 @@
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
 
 /*
@@ -34,10 +35,43 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const TerserPlugin = require('terser-webpack-plugin');
 
+/*
+ * Entries ~ Dynamic entries from src / compnents.
+ *
+ */
+const entries = () => {
+  let entries = {};
+
+  if (process.env.npm_config_elements) {
+    // build specified elements
+    // e.g. `npm run start --elements=example-starter`
+    process.env.npm_config_elements.split(',').forEach((element) => {
+      entries[element] = `./src/components/${element}/index.js`;
+    });
+  } else {
+    // components directory
+    // e.g. `npm run start`
+    entries = glob
+      .sync('./src/components/**/index.js')
+      .reduce((obj, file) => {
+        const entry = path.basename(file.replace(/index\.js/, ''));
+        obj[entry] = file;
+        return obj;
+      }, {})
+  }
+
+  return entries;
+};
+
+
+/*
+ * Webpack
+ *
+ * https://webpack.js.org/
+ */
 module.exports = {
   entry: {
-    styles: './src/css/main.scss',
-    app: './src/js/app.js',
+    ...entries(),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -61,6 +95,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Tailwind CSS Playground',
       template: './src/html/index.html',
+      inject: 'head',
     }),
   ],
   module: {
@@ -74,13 +109,13 @@ module.exports = {
         test: /.(css|s[ac]ss)$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'to-string-loader',
           },
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
-              sourceMap: true,
+              sourceMap: false,
+              esModule: false,
             },
           },
           {
@@ -92,6 +127,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.scss', '.sass', '.css'],
   },
   optimization: {
     minimize: process.env.NODE_ENV === 'production',

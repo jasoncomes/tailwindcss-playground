@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:host {
+  color: #fff;
+
+  h2 {
+    @apply font-bold text-lg;
+  }
+}
+
+::slotted(p) {
+  @apply my-5;
+}

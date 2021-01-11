@@ -6,23 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" integrity="sha512-+WF6UMXHki/uCy0vATJzyA9EmAcohIQuwpNz0qEO+5UeE5ibPejMRdFuARSrl1trs3skqie0rY/gNiolfaef5w==" crossorigin="anonymous" />
 
   </head>
 
   <body class="min-h-screen flex flex-col justify-center">
 
-    <div class="bg-indigo-700">
-      <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-          <span class="block">Feel free to buy me a beer.</span>
-          <span class="block">Next conference, I'll hit you back!</span>
-        </h2>
-        <p class="mt-4 text-lg leading-6 text-indigo-200">Brought to you by <a class="underline" href="https://www.linkedin.com/in/jasonwcomes/">Jason Comes</a>. Feel free to contribute either by <a class="underline" href="https://github.com/jasoncomes/tailwindcss-playground/issues">issues</a> or <a class="underline" href="https://github.com/jasoncomes/tailwindcss-playground/pulls">pull requests</a>.</p>
-        <a href="https://www.paypal.com/donate?business=GJKCBDMVCTHW6&item_name=beer+belly&currency_code=USD" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto">
-          Donate to the beer belly!
-        </a>
-      </div>
-    </div>
+    <tailwindcss-intro button="Donate to the beer belly!" link="https://www.paypal.com/donate?business=GJKCBDMVCTHW6&item_name=beer+belly&currency_code=USD"></tailwindcss-intro>
+
+    <example-starter title="Example Starter" button="Some Label">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus mollis lacus sed venenatis. Donec a ullamcorper magna. Etiam tincidunt risus in pellentesque consequat. Suspendisse feugiat tortor et lacus varius, in fringilla orci tincidunt. Phasellus volutpat a quam quis fermentum. Integer lobortis, justo eu laoreet pellentesque, orci orci suscipit ante, in dictum ligula augue at massa. Integer volutpat dapibus lacus, vitae porttitor lectus placerat vitae. Proin in sodales leo. Curabitur convallis elit eu lorem interdum, vitae vulputate erat elementum. Etiam ipsum arcu, malesuada ut enim vitae, aliquet tristique justo. Phasellus tincidunt at dolor euismod lobortis. Suspendisse ullamcorper nunc ut est gravida, et rutrum diam auctor. Nulla facilisi. Etiam id nibh dui. Suspendisse vitae pretium purus. Morbi egestas diam justo.</p>
+
+      <p>Morbi pretium justo vel felis vulputate sagittis. Fusce dictum non sapien et mollis. Curabitur dolor justo, efficitur sed enim nec, lobortis consequat elit. Pellentesque sem lectus, varius ut feugiat a, pharetra et lectus. Ut consectetur eget velit vel tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent vel tincidunt ante, et ornare justo. Cras ac efficitur nisi. Curabitur eleifend nibh non dictum finibus. Sed a augue sit amet nisi commodo vulputate. Sed feugiat dignissim leo, sed aliquet est. Pellentesque varius mi dui, sit amet congue nulla efficitur vel. Aliquam sagittis maximus nisi, vitae sagittis nunc blandit at.</p>
+    </example-starter>
 
   </body>
 

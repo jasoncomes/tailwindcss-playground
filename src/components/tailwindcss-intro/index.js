@@ -28,8 +28,8 @@ class WebComponent extends HTMLElement {
     super();
 
     // attributes
-    this.button = this.getAttribute('button');
-    this.link = this.getAttribute('link');
+    this.button = this.getAttribute('button') || '';
+    this.link = this.getAttribute('link') || '';
 
     // attach shadow
     this.attachShadow({ mode: 'open' });
@@ -99,6 +99,11 @@ class WebComponent extends HTMLElement {
    */
   attributeChangedCallback(name, oldValue, newValue) {
     console.log('Attributes changed.');
+    console.table({
+      name,
+      oldValue,
+      newValue,
+    });
     this.render();
   }
 }
